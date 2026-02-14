@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Feliz Aniversário 🎉</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <button id="surpriseButton">🎁 Clique para ver a surpresa!</button>
+
+            <div id="message" class="hidden">
+                <h1>Parabéns Camile 💖</h1>
+                <p id="menssagem"></p>
+            </div>
+
+            <div class="music-selector hidden" id="musicSelector">
+                <p>Escolha a música primeiro 🎶</p>
+
+                <button class="music-btn" data-src="src/music/canthelp.mp3">
+                    🎷 Can't Help Falling in Love
+                </button>
+
+                <button class="music-btn" data-src="src/music/worldweknew.mp3">
+                    🌌 The World We Knew
+                </button>
+
+                <button class="music-btn" data-src="src/music/sway.mp3">
+                    🔥 Sway
+                </button>
+            </div>
+
+            <button id="resetButton" class="hidden">↩ Voltar ao início</button>
+
+            <audio id="musica"></audio>
+
+        </div>
+    </div>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
