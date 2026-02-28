@@ -4,12 +4,15 @@ const menssagem = document.getElementById('menssagem');
 const musicSelector = document.getElementById("musicSelector");
 const audio = document.getElementById("musica");
 const resetButton = document.getElementById("resetButton");
+let musicaSelecionada = false;
 
 document.querySelectorAll(".music-btn").forEach(btn => {
     btn.addEventListener("click", () => {
 
         const selectedMusic = btn.getAttribute("data-src");
         resetButton.classList.remove("hidden");
+
+        musicaSelecionada = true; // 🔒 trava liberada
 
         audio.src = selectedMusic;
         audio.volume = 0;
@@ -65,10 +68,18 @@ resetButton.addEventListener("click", () => {
 
     // Recarregar a página
     location.reload();
+
+    // Trava música
+    musicaSelecionada = false;
 });
 
 
 surpriseButton.addEventListener('click', () => {
+
+    if (!musicaSelecionada) {
+        alert("Escolha uma música primeiro 🎵");
+        return; // Bloqueia execução
+    }
 
     document.body.classList.add("night");
     criarEstrelas();
