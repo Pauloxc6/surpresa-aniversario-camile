@@ -62,6 +62,9 @@ resetButton.addEventListener("click", () => {
 
     // Limpa texto
     menssagem.innerHTML = "";
+
+    // Recarregar a página
+    location.reload();
 });
 
 
